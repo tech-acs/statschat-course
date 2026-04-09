@@ -1,10 +1,8 @@
 # StatsChat course
 
-Welcome to the StatsChat course!!!
+Welcome to the StatsChat course!!! All of the course materials can be found [here](https://datasciencecampus.github.io/uneca-statschat-course/).
 
-We will use this GitHub repo to submit exercises, review code, and ask questions. All of the course materials can be found [here](https://datasciencecampus.github.io/uneca-statschat-course/).
-
-To start collaborating in the repo we need to get set up.
+We will use this GitHub repo to submit exercises, review code, and ask questions. To start collaborating in the repo we need to get set up.
 
 ### Create a GitHub account
 
@@ -50,4 +48,4 @@ You are now set up! You can push your work to your individual branch of the `sta
 
 ---
 
-If you gave any questions please just post an [issue](https://github.com/tech-acs/statschat-course/issues).
+If you have any questions please just post an [issue](https://github.com/tech-acs/statschat-course/issues).
