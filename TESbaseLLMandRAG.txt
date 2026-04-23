@@ -1,0 +1,31 @@
+Read the example below and respond briefly to the questions that follow.
+
+Question:
+According to the National Statistics Office’s Consumer Price Bulletin, what was the year-on-year inflation rate in March 2025, and which categories contributed most to the increase?
+
+Plain LLM-style answer:
+	Inflation in March 2025 was around 5.8%, mainly driven by food prices and transport costs. Housing-related costs may also have contributed. This 	suggests inflation remained elevated during the period.
+
+Grounded / RAG-style answer:
+	According to the Consumer Price Bulletin, March 2025, the year-on-year inflation rate was 6.2%, up from 5.8% in February 2025. The bulletin states 	that the increase was mainly driven by food and non-alcoholic beverages, transport, and housing, water, electricity, gas and other fuels. A technical 	note in the same publication also clarifies that year-on-year inflation is not the same as a monthly change.
+
+Questions:
+- Which answer would you trust more? Why?
+- What makes an answer more useful in an official statistics context?
+- In your organisation, what kind of report, publication, or document might benefit from a RAG-style system?
+- What could still go wrong, even if a RAG system is used?
+
+Optional extension:
+- Why bother creating our own RAG system (which builds on existing models)?Rather than just using the most recent LLM-based models (e.g. ChatGPT 5, Gemini 3, Claude Opus 4), which already have a form of RAG built in.
+
+Guidance:
+Short bullet points are fine.
+This task should take around 5–10 minutes.
+Be ready to discuss your answers in the Thursday lab.
+
+Answer:
+- I prefer the RAG-style answer because it is based on a traceable source of document and give a chance to base the response on the known latest published result.
+- Its traceability to a known official publication
+- Most of the official publications can be used to feed to a RAG model as a basis to respond to question related to the continent's situation to the users
+- RAG system still go wrong if reference used is outdated or wrong.
+- If properly implemented it gives control over sources used and can give you an auditable result.
