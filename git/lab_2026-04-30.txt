@@ -1,0 +1,34 @@
+Lab for Apr. 30, 2026
+
+StatsChat overview exercise
+This short task reinforces the main idea from the session: StatsChat is easiest to understand if we separate the one-time preparation of the document collection from the per-question answering process.
+
+Task
+Choose one realistic question that you would want a StatsChat-like system to answer in your own organisation.
+
+Then answer the questions below briefly.
+
+Questions
+What is your question? 
+-> What is the economic prospect of Africa in the year 2026. Which countries are the best performers and which are weak.
+Is there a pattern in the countries which are doing good and which are doing not so good, like region or other factor like resources?
+
+What documents or reports would the system need access to? 
+-> Economic report on Africa, Africa Regional integration report, etc.
+
+Which steps would need to happen once before users could ask this question? 
+-> Reading in the different reports and preparing/indexing the different information in a chunk.
+
+Which steps would happen each time a user asks the question? 
+-> sending the question and the relevant retrieved chunk from the above read in and prepared document and sending them to LLM
+
+What would make you trust the final answer more? 
+-> The fact that the answer I get will be based on a known report prepared by my organization.
+
+What is one reason you might still be cautious, even if the answer looks good? 
+-> However, there are still some challenges in correctly extracting the right information from the report. That is why making the different reports machine-readable is important. 
+
+Optional extension
+A user could also try a general AI search summary instead of a StatsChat-style system. What might be better about a StatsChat-style approach for this question? What might still be difficult?
+-> General AI can give answers which are sourced from whatever available data sources, be it trusted or not. StatsChat-style system uses know and trusted source in their response which is also easily traceable. However, they can also make mistakes and need human verification. Also PDF retrieval and processing is still not perfect. 
+
