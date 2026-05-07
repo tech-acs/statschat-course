@@ -10,7 +10,7 @@ Then answer the questions below briefly.
 
 Questions
 What is your question? 
--> What is the economic prospect of Africa in the year 2026. Which countries are the best performers and which are weak.
+-> What is the economic prospect of Africa in 2026. Which countries are the best performers and which are weak.
 Is there a pattern in the countries which are doing good and which are doing not so good, like region or other factor like resources?
 
 What documents or reports would the system need access to? 

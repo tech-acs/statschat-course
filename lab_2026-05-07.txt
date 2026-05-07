@@ -1,0 +1,91 @@
+Exercise for the lab
+The Tuesday session includes a short exercise to complete before the Thursday lab. It is designed to be easy and quick: choose one source from your own organisation, then inspect two simple extraction examples. We will discuss answers together in the lab.
+
+Week 5 exercise: choosing a source and inspecting extraction
+This short exercise is for the Thursday lab. It should take around 10–15 minutes. The aim is to absorb the main lesson from Tuesday’s session:
+
+PDF processing is not just extracting text. It is preserving evidence in a form that retrieval and generation can use.
+
+You do not need to write code.
+
+Part 1: choose a source from your own organisation
+Think of one publication or data source that could be useful in a StatsChat-like system.
+
+It could be:
+
+an annual statistical report
+a monthly or quarterly release
+a factsheet or infographic
+a spreadsheet or table collection
+a web page, database, or API
+a mix of the above
+Answer briefly:
+
+What source would you choose?
+Who might ask questions about it? 
+-> Economic Report on Africa 2025
+What kinds of questions would they ask?
+-> What are the main drivers of economic growth in Africa in recent rears?
+What format is it in? For example: PDF, HTML, Excel, Word, database/API.
+-> PDF
+What would be important to preserve: page numbers, dates, units, geography, table headings, footnotes, charts, metadata?
+-> page numbers, metadata
+
+Part 2: inspect a simple extracted table
+In the CPI March 2026 report, a table includes the total row for inflation. A simple PyMuPDF extraction can return text like this:
+
+Total
+100.0000
+0.5
+4.4
+The original table headings tell us that the final number, 4.4, is the percentage change on the same month of the previous year.
+
+Answer briefly:
+
+What information has been preserved?
+-> The table headings
+What information is only understandable if we keep the table heading or surrounding context?
+-> 
+Would this be enough to answer: “What was the annual inflation rate in March 2026?”
+-> No
+What would a better structured output keep?
+-> Include all the table headings, the unit of the values, and the title of the table.
+
+Part 3: inspect a visual factsheet extraction
+In the ICT indicators factsheet, the page is visually clear to a human reader. But extracted text can look more like a sequence of labels and values:
+
+Mobile Phone Ownership by Individuals
+National
+Male
+Female
+53.7%
+54.5%
+52.9%
+Internet Usage by Individuals
+National
+Male
+35.0%
+37.8%
+Female
+32.2%
+
+Answer briefly:
+What information has been preserved? 
+-> table heading(labels)  and units (%)
+What visual structure has been weakened or lost?
+-> the table layout, label and value alignment, inconsistency in the order of reading.
+If this text were indexed for retrieval, what might go wrong?
+->Incorrect matching of labels and values
+If this text were passed to an LLM, what might go wrong?
+->It may miss assign value to the labels
+What metadata or structure would you want the ingestion pipeline to preserve?
+-> the table structure and the associated information like title of the table
+
+Part 4: bring one point to the lab
+Bring one short comment to the lab:
+ - one thing that surprised you
+   -> unless there is a better way to represent the things we have seen above, it will be difficult to have confidence in the response we get from RAG like system
+ - one thing that might be difficult for your organisation’s publications
+   -> 
+ - or one improvement you think would make extraction more useful
+   -> not sure
