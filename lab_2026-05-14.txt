@@ -1,0 +1,79 @@
+Week 6 exercise: choosing useful chunks
+This short exercise is for the Thursday lab. It should take around 10-15 minutes.
+
+The aim is to practise the main lesson from Tuesday’s session:
+
+A chunk is the unit of evidence the retrieval system can find and pass to the LLM.
+
+You do not need to write code.
+
+Part 1: think about your own source
+Use the publication or data source you had in mind from Week 5, or choose a new one.
+
+Answer briefly:
+
+What source would you want to feed into a StatsChat-like system?
+-> Economic Report on Africa 2025 - https://www.uneca.org/economic-report-on-africa-2025
+What kind of questions would users ask about it?
+-> What are the main messages of the publication?
+What would count as a useful evidence unit?
+	- a paragraph? perhaps a paragraph
+	- a table?
+	- a page?
+	- a section?
+	- a chart plus caption?
+What metadata should each chunk carry? For example: title, date, page number, table title, geography, unit, source URL.
+-> Title, geography, unit and page number
+
+Part 2: compare chunking options
+Imagine this text has been extracted from a CPI report:
+	Consumer Price Indices and Inflation Rates - March 2026.
+	Table 1: One month and twelve month percentage changes by CPI division.
+	Total: weight 100.0000, one month change 0.5%, twelve month change 4.4%.
+	Food and non-alcoholic beverages increased by 7.1% over twelve months.
+	Transport increased by 3.8% over twelve months.
+	Source: Kenya National Bureau of Statistics, CPI release, March 2026.
+
+A user asks:
+	What was Kenya’s annual inflation rate in March 2026?
+
+Which chunking option would be best?
+-> option B
+Option A: very small chunks
+	Chunk 1: Consumer Price Indices and Inflation Rates - March 2026.
+	Chunk 2: Table 1: One month and twelve month percentage changes by CPI division.
+	Chunk 3: Total: weight 100.0000, one month change 0.5%, twelve month change 4.4%.
+	Chunk 4: Source: Kenya National Bureau of Statistics, CPI release, March 2026.
+Option B: one useful evidence chunk
+	Chunk 1: Consumer Price Indices and Inflation Rates - March 2026.
+	Table 1: One month and twelve month percentage changes by CPI division.
+	Total: weight 100.0000, one month change 0.5%, twelve month change 4.4%.
+	Source: Kenya National Bureau of Statistics, CPI release, March 2026.
+Option C: very large mixed chunk
+	Chunk 1: Consumer Price Indices and Inflation Rates - March 2026.
+	Table 1: One month and twelve month percentage changes by CPI division.
+	Total: weight 100.0000, one month change 0.5%, twelve month change 4.4%.
+	Food and non-alcoholic beverages increased by 7.1% over twelve months.
+	Transport increased by 3.8% over twelve months.
+	Several other sections from the report follow, including notes on methodology, unrelated price divisions, and background information from other 	pages.
+	Source: Kenya National Bureau of Statistics, CPI release, March 2026.
+
+Questions
+Which option is best for this user question, and why?
+
+What is risky about Option A?
+-> small chunk may split relevant information like title, unit or source  across multiple chunks.
+What is risky about Option C?
+-> unrequested information are included in one chunk.
+
+What metadata would you attach to Option B?
+-> page number, document title, footnotes if any
+How would your answer change if the user asked a broader question, such as “What drove inflation in March 2026?”
+-> may be extract from different chunk and report what contributed to the inflation figures
+
+Part 3: bring one point to the lab
+Bring one short comment to the lab:
+	one thing that makes a good chunk
+	one risk with chunks that are too small
+	one risk with chunks that are too large
+	or one question about embeddings/vector stores
